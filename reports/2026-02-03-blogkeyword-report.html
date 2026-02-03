@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[AX Insight팀] 주간 Blog 키워드 (2월 1주차)</title>
+    <style>
+        /* SNS Weekly Report 스타일 적용 */
+        body { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; margin: 0; padding: 0; background-color: #f4f7f9; color: #333; }
+        .container { max-width: 800px; margin: 20px auto; background-color: #f4f7f9; padding: 15px; border-radius: 10px; }
+        .card { background-color: #ffffff; padding: 25px 30px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #e0e6ed; border-left: 6px solid; }
+        .card-insight { border-left-color: #ff6f61; }
+        .card-keywords { border-left-color: #4a90e2; }
+        .card-hashtags { border-left-color: #50c878; }
+        .card-trends { border-left-color: #8e44ad; }
+        .card-sentiment { border-left-color: #f1c40f; }
+        .card-network { border-left-color: #e67e22; }
+        .card-category { border-left-color: #17a2b8; }
+        .card-risk { border-left-color: #dc3545; }
+        
+        .report-title-box { background-color: #e0f2f7; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 20px; }
+        .report-title { color: #2c3e50; font-size: 26px; font-weight: 700; margin: 0; }
+        
+        h3 { color: #ffffff; background-color: #5d6d7e; padding: 10px 15px; margin: -25px -30px 20px -30px; border-radius: 8px 8px 0 0; font-size: 18px; font-weight: 600; display: flex; align-items: center; }
+        .card-insight h3 { background-color: #ff6f61; }
+        .card-keywords h3 { background-color: #4a90e2; }
+        .card-hashtags h3 { background-color: #50c878; }
+        .card-trends h3 { background-color: #8e44ad; }
+        .card-sentiment h3 { background-color: #f1c40f; color: #555; }
+        .card-network h3 { background-color: #e67e22; }
+        
+        table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 15px; border: 1px solid #dee2e6; border-radius: 6px; overflow: hidden; }
+        th, td { border-bottom: 1px solid #dee2e6; padding: 10px 12px; text-align: left; font-size: 13px; vertical-align: top; }
+        th { background-color: #f1f3f5; font-weight: 600; color: #495057; border-top: none; border-bottom-width: 2px; }
+        tbody tr:last-child td { border-bottom: none; }
+        tbody tr:hover { background-color: #f8f9fa; }
+        
+        .highlight { background-color: #fef9e7; padding: 2px 5px; border-radius: 4px; font-weight: 600; color: #b7950b; border: 1px solid #fdeca6; }
+        .emoji { font-size: 1.1em; margin-right: 10px; vertical-align: -1px; }
+        .ai-comment { background-color: #f8f9fa; border-left: 4px solid #adb5bd; padding: 12px 18px; margin-top: 18px; font-size: 13px; border-radius: 4px; line-height: 1.65; color: #495057; white-space: pre-line; }
+        .greeting, .closing { text-align: left; font-size: 14px; margin-bottom: 25px; line-height: 1.7; }
+        .closing { margin-top: 30px; font-size: 12px; border-top: 1px solid #d5dbdb; padding-top: 20px; color: #7f8c8d; }
+        .footer { text-align: center; color: #aab7c4; font-size: 11px; margin-top: 30px; }
+        
+        .keyword-tag { background-color: #e9ecef; padding: 4px 10px; border-radius: 15px; font-size: 12px; margin-right: 6px; display: inline-block; margin-bottom: 6px; color: #495057; border: 1px solid #ced4da; }
+        .keyword-hot { background-color: #fff3cd; border-color: #ffeaa7; color: #856404; }
+        .keyword-rising { background-color: #d1ecf1; border-color: #bee5eb; color: #0c5460; }
+        .keyword-stable { background-color: #d4edda; border-color: #c3e6cb; color: #155724; }
+        
+        .chart-link { background-color: #eafaf1; padding: 12px 18px; border-radius: 6px; margin: 15px 0 20px 0; font-size: 13px; border: 1px solid #a3e4d7; text-align: center; }
+        .chart-link a { color: #16a085; font-weight: 600; text-decoration: none; }
+        .chart-link a:hover { text-decoration: underline; }
+        
+        .network-item { margin-bottom: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
+        .network-title { font-weight: 600; color: #495057; margin-bottom: 8px; }
+        .network-data { font-size: 12px; color: #6c757d; line-height: 1.4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="report-title-box">
+            <h2 class="report-title">📊 [AX Insight팀] 주간 Blog 키워드 (2월 1주차)</h2>
+        </div>
+        
+        <div class="card card-keywords">
+            <h3><span class="emoji">🔥</span>핫 키워드 TOP 10</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22horizontalBar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22%EB%AF%B8%EB%8B%88%22%2C%22%EA%B0%80%EC%84%B1%EB%B9%84%22%2C%22%EC%99%80%EC%9D%B8%22%2C%22%EB%AC%B4%EC%84%A0%22%2C%22%EB%AC%BC%EA%B1%B8%EB%A0%88%22%2C%22%EA%B3%B5%EA%B8%B0%22%2C%22%EC%86%8C%ED%98%95%22%2C%22%EC%84%B8%ED%83%81%EA%B8%B0%22%2C%22%EA%B0%80%EC%A0%95%EC%9A%A9%22%2C%22ai%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22%EC%96%B8%EA%B8%89%20%EC%88%98%22%2C%22data%22%3A%5B309%2C263%2C234%2C226%2C190%2C186%2C183%2C171%2C168%2C167%5D%2C%22backgroundColor%22%3A%5B%22%23e74c3c%22%2C%22%233498db%22%2C%22%232ecc71%22%2C%22%23f39c12%22%2C%22%239b59b6%22%2C%22%231abc9c%22%2C%22%2334495e%22%2C%22%23e67e22%22%2C%22%2395a5a6%22%2C%22%2316a085%22%5D%2C%22borderColor%22%3A%5B%22%23e74c3c%22%2C%22%233498db%22%2C%22%232ecc71%22%2C%22%23f39c12%22%2C%22%239b59b6%22%2C%22%231abc9c%22%2C%22%2334495e%22%2C%22%23e67e22%22%2C%22%2395a5a6%22%2C%22%2316a085%22%5D%2C%22borderWidth%22%3A1%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22maintainAspectRatio%22%3Atrue%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22beginAtZero%22%3Atrue%2C%22ticks%22%3A%7B%22stepSize%22%3A1%7D%7D%7D%7D%7D&width=500&height=400" alt="인기 키워드 차트" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            </div>
+            <table>
+                <thead>
+                    <tr><th>순위</th><th>키워드</th><th>언급량</th><th>감성점수</th><th>트렌드</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                            <td>1</td>
+                            <td><strong>미니</strong></td>
+                            <td>309회</td>
+                            <td style="color: #27ae60">
+                                72점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>2</td>
+                            <td><strong>가성비</strong></td>
+                            <td>263회</td>
+                            <td style="color: #27ae60">
+                                71점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>3</td>
+                            <td><strong>와인</strong></td>
+                            <td>234회</td>
+                            <td style="color: #27ae60">
+                                72점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>4</td>
+                            <td><strong>무선</strong></td>
+                            <td>226회</td>
+                            <td style="color: #27ae60">
+                                69점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>5</td>
+                            <td><strong>물걸레</strong></td>
+                            <td>190회</td>
+                            <td style="color: #27ae60">
+                                69점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>6</td>
+                            <td><strong>공기</strong></td>
+                            <td>186회</td>
+                            <td style="color: #27ae60">
+                                70점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>7</td>
+                            <td><strong>소형</strong></td>
+                            <td>183회</td>
+                            <td style="color: #27ae60">
+                                71점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>8</td>
+                            <td><strong>세탁기</strong></td>
+                            <td>171회</td>
+                            <td style="color: #27ae60">
+                                69점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>9</td>
+                            <td><strong>가정용</strong></td>
+                            <td>168회</td>
+                            <td style="color: #27ae60">
+                                71점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr><tr>
+                            <td>10</td>
+                            <td><strong>ai</strong></td>
+                            <td>167회</td>
+                            <td style="color: #27ae60">
+                                70점
+                            </td>
+                            <td><span class="keyword-tag" style="background-color: #27ae60; color: white; padding: 2px 6px; border-radius: 4px;">
+                                📈 긍정
+                            </span></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card card-sentiment">
+            <h3><span class="emoji">💭</span>키워드별 감성 분석</h3>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="https://quickchart.io/chart?c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22%EB%AF%B8%EB%8B%88%22%2C%22%EA%B0%80%EC%84%B1%EB%B9%84%22%2C%22%EC%99%80%EC%9D%B8%22%2C%22%EB%AC%B4%EC%84%A0%22%2C%22%EB%AC%BC%EA%B1%B8%EB%A0%88%22%5D%2C%22datasets%22%3A%5B%7B%22label%22%3A%22%EA%B8%8D%EC%A0%95%22%2C%22data%22%3A%5B92%2C92%2C90%2C88%2C88%5D%2C%22backgroundColor%22%3A%22%232ecc71%22%2C%22borderColor%22%3A%22%2327ae60%22%2C%22borderWidth%22%3A1%7D%2C%7B%22label%22%3A%22%EC%A4%91%EB%A6%BD%22%2C%22data%22%3A%5B7%2C6%2C7%2C8%2C8%5D%2C%22backgroundColor%22%3A%22%23f39c12%22%2C%22borderColor%22%3A%22%23e67e22%22%2C%22borderWidth%22%3A1%7D%2C%7B%22label%22%3A%22%EB%B6%80%EC%A0%95%22%2C%22data%22%3A%5B1%2C2%2C2%2C4%2C4%5D%2C%22backgroundColor%22%3A%22%23e74c3c%22%2C%22borderColor%22%3A%22%23c0392b%22%2C%22borderWidth%22%3A1%7D%5D%7D%2C%22options%22%3A%7B%22responsive%22%3Atrue%2C%22maintainAspectRatio%22%3Atrue%2C%22plugins%22%3A%7B%22legend%22%3A%7B%22display%22%3Atrue%2C%22position%22%3A%22top%22%7D%7D%2C%22scales%22%3A%7B%22x%22%3A%7B%22stacked%22%3Atrue%7D%2C%22y%22%3A%7B%22stacked%22%3Atrue%2C%22beginAtZero%22%3Atrue%2C%22max%22%3A100%2C%22ticks%22%3A%7B%22stepSize%22%3A20%7D%7D%7D%7D%7D&width=500&height=350" alt="키워드별 감성 분석 차트" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            </div>
+            <table>
+                <thead>
+                    <tr><th>키워드</th><th>긍정</th><th>중립</th><th>부정</th><th>전체 감성</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                            <td><strong>미니</strong></td>
+                            <td style="color: #2ecc71;">92%</td>
+                            <td style="color: #f39c12;">7%</td>
+                            <td style="color: #e74c3c;">1%</td>
+                            <td><span class="keyword-tag keyword-positive">긍정적</span></td>
+                        </tr><tr>
+                            <td><strong>가성비</strong></td>
+                            <td style="color: #2ecc71;">92%</td>
+                            <td style="color: #f39c12;">6%</td>
+                            <td style="color: #e74c3c;">2%</td>
+                            <td><span class="keyword-tag keyword-positive">긍정적</span></td>
+                        </tr><tr>
+                            <td><strong>와인</strong></td>
+                            <td style="color: #2ecc71;">90%</td>
+                            <td style="color: #f39c12;">7%</td>
+                            <td style="color: #e74c3c;">2%</td>
+                            <td><span class="keyword-tag keyword-positive">긍정적</span></td>
+                        </tr><tr>
+                            <td><strong>무선</strong></td>
+                            <td style="color: #2ecc71;">88%</td>
+                            <td style="color: #f39c12;">8%</td>
+                            <td style="color: #e74c3c;">4%</td>
+                            <td><span class="keyword-tag keyword-positive">긍정적</span></td>
+                        </tr><tr>
+                            <td><strong>물걸레</strong></td>
+                            <td style="color: #2ecc71;">88%</td>
+                            <td style="color: #f39c12;">8%</td>
+                            <td style="color: #e74c3c;">4%</td>
+                            <td><span class="keyword-tag keyword-positive">긍정적</span></td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
